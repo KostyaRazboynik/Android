@@ -1,0 +1,45 @@
+<resources>
+    <string name="app_name">ToDo</string>
+
+    <string name="my_tasks">Moи задачи</string>
+    <string name="add_fab_description">Добавить задачу</string>
+
+    <string name="no_data">Нет задач</string>
+    <string name="task_title">Что нужно сделать?</string>
+    <string name="task_description">Описание задачи</string>
+    <string name="creation_date">Дата создания:</string>
+    <string name="last_change_date">Последнее изменение:</string>
+    <string name="priority">Приоритет</string>
+    <string name="undo">Отменить</string>
+    <string name="do_until">Сделать до</string>
+
+    <string name="add">Добавить задачу</string>
+    <string name="update">Обновить задачу</string>
+    <string name="delete">Удалить задачу</string>
+
+    <string name="no">""</string>
+    <string name="high">Высокий</string>
+    <string name="low">Низкий</string>
+
+    <string name="successfully_added">Добавлено!</string>
+    <string name="fill_title">Пожалуйста, заполните название задачи</string>
+    <string name="successfully_updated">Обновлено!</string>
+    <string name="warning">Вы уверены, что хотите удалить:</string>
+    <string name="delete_warning">Удалить</string>
+    <string name="no_neg_btn">НЕТ</string>
+    <string name="yes_pos_btn">ДА</string>
+    <string name="successfully_removed">Удалено</string>
+
+    <string name="high_priority">Высокий приоритет</string>
+    <string name="no_priority">Нет</string>
+    <string name="low_priority">Низкий приоритет</string>
+
+    <string name="ok">ОК</string>
+    <string name="cancel">ОТМЕНА</string>
+
+    <string-array name="priorities">
+        <item>Нет</item>
+        <item>Высокий приоритет</item>
+        <item>Низкий приоритет</item>
+    </string-array>
+</resources>

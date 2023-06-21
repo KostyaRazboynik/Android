@@ -1,0 +1,45 @@
+<resources>
+    <string name="app_name">ToDo</string>
+
+    <string name="my_tasks">My tasks</string>
+    <string name="add_fab_description">Add task</string>
+
+    <string name="no_data">No Tasks</string>
+    <string name="task_title">What should be done?</string>
+    <string name="task_description">Detailed description</string>
+    <string name="creation_date">Date of creation:</string>
+    <string name="last_change_date">Last change:</string>
+
+    <string name="add">Add Task</string>
+    <string name="update">Update task</string>
+    <string name="delete">Delete task</string>
+    <string name="undo">Undo</string>
+    <string name="priority">Priority</string>
+    <string name="do_until">Do until</string>
+
+    <string name="no">""</string>
+    <string name="high">High</string>
+    <string name="low">Low</string>
+
+    <string name="successfully_added">Successfully Added!</string>
+    <string name="fill_title">Please fill out the title</string>
+    <string name="successfully_updated">Successfully Updated!</string>
+    <string name="warning">Are you sure you want to remove:</string>
+    <string name="delete_warning">Delete</string>
+    <string name="no_neg_btn">NO</string>
+    <string name="yes_pos_btn">YES</string>
+    <string name="successfully_removed">Successfully Removed</string>
+
+    <string name="high_priority">High Priority</string>
+    <string name="no_priority">No</string>
+    <string name="low_priority">Low Priority</string>
+
+    <string name="ok">OK</string>
+    <string name="cancel">Cancel</string>
+
+    <string-array name="priorities">
+        <item>No</item>
+        <item>High Priority</item>
+        <item>Low Priority</item>
+    </string-array>
+</resources>

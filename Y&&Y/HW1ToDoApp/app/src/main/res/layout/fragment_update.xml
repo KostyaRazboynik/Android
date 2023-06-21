@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="args"
+            type="com.konstantinmuzhik.hw1todoapp.fragments.update.UpdateFragmentArgs" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:padding="24dp"
+
+        android:background="@color/beige"
+
+        tools:context=".fragments.update.UpdateFragment">
+
+        <EditText
+            android:id="@+id/current_title_et"
+
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+
+            android:paddingStart="24dp"
+            android:paddingEnd="24dp"
+
+            android:autofillHints="username"
+            android:background="@drawable/custom_input"
+            android:hint="@string/task_title"
+            android:text="@{args.currentItem.title}"
+            android:inputType="textPersonName"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/current_description_et"
+
+            android:layout_width="0dp"
+            android:layout_height="200dp"
+            android:layout_marginTop="8dp"
+
+            android:paddingStart="24dp"
+            android:paddingTop="16dp"
+            android:paddingEnd="24dp"
+
+            android:autofillHints=""
+            android:background="@drawable/custom_input"
+            android:gravity="start|top"
+            android:hint="@string/task_description"
+            android:text="@{args.currentItem.description}"
+            android:inputType="textMultiLine"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/current_title_et" />
+
+        <TextView
+            android:id="@+id/current_priority_et"
+
+            android:layout_width="0dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="4dp"
+
+            android:paddingStart="3dp"
+            android:paddingEnd="3dp"
+
+            android:text="@string/priority"
+            android:textColor="@color/black"
+            android:textSize="17sp"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.666"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/current_description_et" />
+
+        <Spinner
+            android:id="@+id/current_priority_sp"
+
+            android:layout_width="0dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="4dp"
+
+            android:parsePriorityToInt="@{args.currentItem.priority}"
+            android:entries="@array/priorities"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/current_priority_et" />
+
+        <View
+            android:id="@+id/current_first_line_v"
+
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:layout_marginTop="7dp"
+
+            android:paddingEnd="24dp"
+
+            android:background="@color/color_light_gray"
+            android:paddingStart="24dp"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/current_priority_sp" />
+
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/current_deadline_sw"
+
+            android:layout_width="0dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="4dp"
+
+            android:text="@string/do_until"
+            android:textSize="17sp"
+            android:hasDeadline="@{args.currentItem.deadline}"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/current_first_line_v" />
+
+        <TextView
+            android:id="@+id/current_deadline_date"
+
+            android:layout_width="0dp"
+            android:layout_height="17dp"
+
+            android:paddingStart="3dp"
+            android:paddingEnd="3dp"
+
+            android:text="@{args.currentItem.deadline}"
+            android:textColor="@color/color_light_blue"
+            android:textSize="15sp"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/current_deadline_sw" />
+
+        <View
+            android:id="@+id/current_second_line_v"
+
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:layout_marginTop="7dp"
+
+            android:paddingStart="24dp"
+            android:paddingEnd="24dp"
+
+            android:background="@color/color_light_gray"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/current_deadline_date" />
+
+        <TextView
+            android:id="@+id/creation_date"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+
+            android:hint="@string/creation_date"
+            android:text="@{args.currentItem.creationDate}"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/current_second_line_v" />
+
+        <TextView
+            android:id="@+id/last_change_date"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+
+            android:hint="@string/last_change_date"
+            android:text="@{args.currentItem.changeDate}"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/creation_date" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

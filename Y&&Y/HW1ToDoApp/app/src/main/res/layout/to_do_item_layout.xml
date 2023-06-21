@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="toDoItem"
+            type="com.konstantinmuzhik.hw1todoapp.data.models.ToDoItem" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginVertical="4dp"
+
+        app:cardElevation="5dp"
+        app:cardCornerRadius="8dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/row_background"
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:sendDataToUpdateFragment="@{toDoItem}">
+
+            <CheckBox
+                android:id="@+id/checkbox"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="8dp"
+
+                android:parsePriorityBackground="@{toDoItem.priority}"
+                android:buttonTint="@color/black"
+                android:checked="@{toDoItem.done}"
+
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="8dp"
+                android:layout_marginEnd="16dp"
+
+                android:gravity="start|center"
+                android:maxLines="3"
+                android:ellipsize="end"
+                android:text="@{toDoItem.title}"
+                android:textSize="17sp"
+                android:textColor="@color/black"
+                android:sendDataToUpdateFragment="@{toDoItem}"
+
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/checkbox"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</layout>

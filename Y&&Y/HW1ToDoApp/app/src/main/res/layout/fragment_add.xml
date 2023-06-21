@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:background="@color/beige"
+
+    android:padding="24dp"
+
+    tools:context=".fragments.add.AddFragment">
+
+    <EditText
+        android:id="@+id/title_et"
+
+        android:layout_width="0dp"
+        android:layout_height="80dp"
+
+        android:autofillHints="username"
+        android:background="@drawable/custom_input"
+
+        android:hint="@string/task_title"
+        android:inputType="textPersonName"
+        android:paddingStart="24dp"
+        android:paddingEnd="24dp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/description_et"
+
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="8dp"
+
+        android:autofillHints=""
+        android:background="@drawable/custom_input"
+        android:gravity="start|top"
+
+        android:hint="@string/task_description"
+        android:inputType="textMultiLine"
+        android:paddingStart="24dp"
+        android:paddingTop="16dp"
+        android:paddingEnd="24dp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title_et" />
+
+    <TextView
+        android:id="@+id/priority_et"
+
+        android:layout_width="0dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="4dp"
+
+        android:paddingStart="3dp"
+        android:paddingEnd="3dp"
+
+        android:text="@string/priority"
+        android:textColor="@color/black"
+        android:textSize="17sp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.666"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/description_et" />
+
+    <Spinner
+        android:id="@+id/priority_sp"
+
+        android:layout_width="0dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="4dp"
+
+        android:entries="@array/priorities"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/priority_et" />
+
+    <View
+        android:id="@+id/first_line_v"
+
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:layout_marginTop="7dp"
+
+        android:background="@color/color_light_gray"
+        android:paddingStart="24dp"
+
+        android:paddingEnd="24dp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/priority_sp" />
+
+    <com.google.android.material.switchmaterial.SwitchMaterial
+        android:id="@+id/deadline_sw"
+
+        android:layout_width="0dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="4dp"
+
+        android:text="@string/do_until"
+        android:textSize="17sp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/first_line_v" />
+
+    <TextView
+        android:id="@+id/deadline_date"
+
+        android:layout_width="0dp"
+        android:layout_height="17dp"
+
+        android:paddingStart="3dp"
+        android:paddingEnd="3dp"
+
+        android:text=""
+        android:textColor="@color/color_light_blue"
+        android:textSize="15sp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/deadline_sw" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
